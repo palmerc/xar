@@ -14,7 +14,6 @@
 /xarql/xar.xcodeproj/*
 !/xarql/xar.xcodeproj/project.pbxproj
 /xar/autom4te.cache/
-/xar/configure
 /xar/Makefile
 /xar/cfghdrs.stamp
 /xar/cfgoutputs.stamp
