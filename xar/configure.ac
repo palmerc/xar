@@ -382,6 +382,8 @@ if test "x${have_liblzma}" = "x1" ; then
   AC_DEFINE([HAVE_LIBLZMA])
 fi
 
+AC_CHECK_LIB([fts],[fts_open],[LIBS="-lfts $LIBS"])
+
 dnl 
 dnl Process .in files.
 dnl 
