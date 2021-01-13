@@ -40,12 +40,7 @@
 #define _XAR_ARCHIVE_H_
 #include <zlib.h>
 #include <libxml/hash.h>
-#ifdef __APPLE__
-#include <CommonCrypto/CommonDigest.h>
-#include <CommonCrypto/CommonDigestSPI.h>
-#else
 #include <openssl/evp.h>
-#endif
 #include <sys/types.h>
 #include <sys/stat.h>
 #include "xar.h"
