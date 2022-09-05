@@ -1934,7 +1934,8 @@ int main(int argc, char *argv[]) {
 	char *sig_path = NULL;
 	char *cert_path = NULL;
 	char *cert_CAfile = NULL;
-	char command = 0, c;
+	char command = 0;
+	int c;
 	char **args;
 	const char *argv0;
 	const char *tocfile = NULL;
