@@ -124,7 +124,7 @@ int32_t xar_signature_add_x509certificate(xar_signature_t sig, const uint8_t *ce
 {
 	struct __xar_x509cert_t *newcert;
 	
-	if( !sig )
+	if( !sig || !cert_data)
 		return -1;
 
 	newcert = malloc(sizeof(struct __xar_x509cert_t));
