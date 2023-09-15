@@ -488,6 +488,9 @@ int xar_close(xar_t x) {
 		const char *opt;
 		size_t cnt;
 		ssize_t wcnt;
+		char *source_date_epoch;
+		struct tm *time_universal;
+		time_t time_fromenv;
 
 		tmpser = (char *)xar_opt_get(x, XAR_OPT_TOCCKSUM);
 		/* If no checksum type is specified, default to sha1 */
@@ -526,6 +529,15 @@ int xar_close(xar_t x) {
 		XAR(x)->header.cksum_alg = htonl(cksum_alg);
 
 		t = time(NULL);
+		/* allow to redefine ts from the env */
+		source_date_epoch = getenv("SOURCE_DATE_EPOCH");
+		if (source_date_epoch != NULL) {
+			time_fromenv = strtol(source_date_epoch, NULL, 10);
+			time_universal = gmtime(&time_fromenv);
+			if (time_universal != NULL) {
+				t = time_fromenv;
+			}
+		}
 		gmtime_r(&t, &tmptm);
 		memset(timestr, 0, sizeof(timestr));
 		strftime(timestr, sizeof(timestr), "%Y-%m-%dT%H:%M:%SZ", &tmptm);
