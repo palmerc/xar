@@ -34,10 +34,10 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-static inline int
+inline int
 vasprintf(char **rResult, const char *aFormat, va_list aAp)
 {
-    int rVal;
+       int rVal;
     char *result;
     va_list ap;
 #define XarAsprintfStartLen 16
@@ -78,7 +78,7 @@ vasprintf(char **rResult, const char *aFormat, va_list aAp)
     return rVal;
 }
 
-static int
+int
 asprintf(char **rResult, const char *aFormat, ...)
 {
     int rVal;

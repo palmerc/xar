@@ -1,35 +1,35 @@
-#undef HAVE_SYS_STATFS_H
-#undef HAVE_SYS_XATTR_H
-#undef HAVE_SYS_EXTATTR_H
-#undef HAVE_SYS_PARAM_H
-#undef HAVE_LGETXATTR
-#undef HAVE_LSETXATTR
-#undef HAVE_GETXATTR
-#undef HAVE_SETXATTR
-#undef HAVE_GETATTRLIST
-#undef HAVE_SETATTRLIST
-#undef HAVE_CHFLAGS
-#undef HAVE_STATVFS
-#undef HAVE_STATFS
-#undef HAVE_EXT2FS_EXT2_FS_H
-#undef HAVE_STRUCT_STAT_ST_FLAGS
-#undef HAVE_STRUCT_STATVFS_F_FSTYPENAME
-#undef HAVE_STRUCT_STATFS_F_FSTYPENAME
-#undef HAVE_SYS_ACL_H
-#undef HAVE_LIBUTIL_H
-#undef HAVE_ASPRINTF
-#undef HAVE_LIBBZ2
-#undef HAVE_LIBLZMA
-#undef HAVE_LCHOWN
-#undef HAVE_LCHMOD
-#undef HAVE_STRMODE
-#undef UID_STRING
-#undef UID_CAST
-#undef GID_STRING
-#undef GID_CAST
-#undef INO_STRING
-#undef INO_HEXSTRING
-#undef INO_CAST
-#undef DEV_STRING
-#undef DEV_HEXSTRING
-#undef DEV_CAST
+#cmakedefine HAVE_SYS_STATFS_H
+#cmakedefine HAVE_SYS_XATTR_H
+#cmakedefine HAVE_SYS_EXTATTR_H
+#cmakedefine HAVE_SYS_PARAM_H
+#cmakedefine HAVE_LGETXATTR
+#cmakedefine HAVE_LSETXATTR
+#cmakedefine HAVE_GETXATTR
+#cmakedefine HAVE_SETXATTR
+#cmakedefine HAVE_GETATTRLIST
+#cmakedefine HAVE_SETATTRLIST
+#cmakedefine HAVE_CHFLAGS
+#cmakedefine HAVE_STATVFS
+#cmakedefine HAVE_STATFS
+#cmakedefine HAVE_EXT2FS_EXT2_FS_H
+#cmakedefine HAVE_STRUCT_STAT_ST_FLAGS
+#cmakedefine HAVE_STRUCT_STATVFS_F_FSTYPENAME
+#cmakedefine HAVE_STRUCT_STATFS_F_FSTYPENAME
+#cmakedefine HAVE_SYS_ACL_H
+#cmakedefine HAVE_LIBUTIL_H
+#cmakedefine HAVE_ASPRINTF
+#cmakedefine HAVE_LIBBZ2
+#cmakedefine HAVE_LIBLZMA
+#cmakedefine HAVE_LCHOWN
+#cmakedefine HAVE_LCHMOD
+#cmakedefine HAVE_STRMODE
+#cmakedefine UID_STRING @UID_STRING@
+#cmakedefine UID_CAST @UID_CAST@
+#cmakedefine GID_STRING @GID_STRING@
+#cmakedefine GID_CAST @GID_CAST@
+#cmakedefine INO_STRING @INO_STRING@
+#cmakedefine INO_HEXSTRING @INO_HEXSTRING@
+#cmakedefine INO_CAST @INO_CAST@
+#cmakedefine DEV_STRING @DEV_STRING@
+#cmakedefine DEV_HEXSTRING @DEV_HEXSTRING@
+#cmakedefine DEV_CAST @DEV_CAST@
