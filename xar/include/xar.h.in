@@ -42,7 +42,7 @@
 #define XAR_VERSION_NUM @XAR_NUMERIC_VERSION@
 
 #include <sys/types.h>
-@C99_FIXED_WIDTH_TYPE_HEADER@
+#include <stdint.h>
 #include <sys/stat.h>
 
 #ifdef __cplusplus

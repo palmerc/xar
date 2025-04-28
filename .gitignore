@@ -32,3 +32,8 @@
 /xar/lib/*.la
 /xar/src/ixar
 /xar/src/xar
+
+.idea
+cmake-build-debug
+builddir
+dist
