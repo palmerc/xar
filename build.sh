@@ -17,7 +17,7 @@ cmake \
     -G Ninja \
     -D CMAKE_VERBOSE_MAKEFILE=on \
     -D CMAKE_INSTALL_PREFIX=${INSTALL_DIR} \
-    ${SOURCE_DIR}/xar
+    ${SOURCE_DIR}
 cmake --build .
 cmake --build . --target install
 
