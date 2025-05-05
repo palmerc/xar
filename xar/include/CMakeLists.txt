@@ -109,7 +109,7 @@ endif()
 configure_file( config.h.in config.h )
 configure_file( xar.h.in xar.h )
 
-target_sources( xar
+target_sources( libxar
         PUBLIC
         FILE_SET public_headers
         BASE_DIRS ${CMAKE_CURRENT_BINARY_DIR}
@@ -117,3 +117,4 @@ target_sources( xar
         FILES
             ${CMAKE_CURRENT_BINARY_DIR}/config.h
             ${CMAKE_CURRENT_BINARY_DIR}/xar.h )
+

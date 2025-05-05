@@ -3,22 +3,24 @@ cmake_minimum_required( VERSION 3.23 )
 project( libxar )
 
 
-add_library( xar STATIC )
-target_include_directories( xar
+add_library( libxar STATIC )
+target_include_directories( libxar
         PUBLIC
             ${CMAKE_CURRENT_SOURCE_DIR}
-            ${CMAKE_CURRENT_BINARY_DIR}/../include )
-target_link_libraries( xar
+            ${CMAKE_CURRENT_BINARY_DIR}/../include
+            ${CMAKE_CURRENT_BINARY_DIR}/../include/xar )
+target_link_libraries( libxar
         PRIVATE
             BZip2::BZip2
             ZLIB::ZLIB
             LibXml2::LibXml2
             OpenSSL::Crypto )
-set_target_properties( xar PROPERTIES
+set_target_properties( libxar PROPERTIES
+        OUTPUT_NAME xar
         PUBLIC_HEADER
             ${CMAKE_CURRENT_BINARY_DIR}/../include/xar.h )
 
-target_sources( xar
+target_sources( libxar
         PUBLIC
             archive.c
             arcmod.c
@@ -43,4 +45,5 @@ target_sources( xar
             util.c
             zxar.c )
 
-install( TARGETS xar )
+install( TARGETS libxar 
+	 PUBLIC_HEADER DESTINATION include/xar )
