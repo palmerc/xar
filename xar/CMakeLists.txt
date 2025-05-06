@@ -7,12 +7,11 @@ set( XAR_MINOR_VERSION "6.1" )
 set( XAR_NUMERIC_VERSION "0x01060180" )
 set( XAR_VERSION "${XAR_MAJOR_VERSION}.${XAR_MINOR_VERSION}" )
 
-set( OPENSSL_USE_STATIC_LIBS on )
-
-set( OPENSSL_ROOT_DIR /opt/homebrew/opt/libressl )
 set( CMAKE_FIND_LIBRARY_SUFFIXES .a .tbd )
 
-find_package( OpenSSL REQUIRED )
+set( OPENSSL_USE_STATIC_LIBS on )
+
+find_package( OpenSSL COMPONENTS Crypto REQUIRED )
 find_package( LibXml2 REQUIRED )
 find_package( BZip2 REQUIRED )
 find_package( ZLIB REQUIRED )
