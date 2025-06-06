@@ -10,7 +10,7 @@ target_include_directories( libxar
             ${CMAKE_CURRENT_BINARY_DIR}/../include
             ${CMAKE_CURRENT_BINARY_DIR}/../include/xar )
 target_link_libraries( libxar
-        PRIVATE
+        PUBLIC
             BZip2::BZip2
             ZLIB::ZLIB
             LibXml2::LibXml2
